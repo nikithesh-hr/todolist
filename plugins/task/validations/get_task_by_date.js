@@ -1,11 +1,11 @@
 'use strict';
 
-const Joi = require('@hapi/joi').extend(require('@hapi/joi-date'));
+const Joi = require('joi');
 
 module.exports = {
   payload: Joi.object({
     
-    deadline: Joi.date().format('YYYY-MM-DD').utc().required()
+    deadline: Joi.date().iso().required(),
  
     
    
